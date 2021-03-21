@@ -1,4 +1,6 @@
-# Fizzbuzz
+Game Of Lifeä voi kokeilla osoitteessa https://argameoflife.s3-eu-west-1.amazonaws.com/index.html
+Rivien ja sarakkeiden määrää voi säädellä, klikkaamalla ruutua sen tila muuttuu kuolleesta eläväksi ja päinvastoin
+# GameOfLife & Fizzbuzz
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
 
