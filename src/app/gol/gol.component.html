@@ -1,0 +1,26 @@
+
+
+<div class="main-container">
+    <h1>Game of life</h1>
+    <h2>Generations: {{generations}}</h2>
+    <div class="item-btn">
+        <button class="btn btn-success grid-btn btn1" (click)="start()">Start</button>
+        <button class="btn btn-danger grid-btn btn2" (click)="stop()">Stop</button>
+        <button class="btn btn-info grid-btn btn3" (click)="clear()">Clear</button>
+    </div>
+    <div class="slider-item">
+        rows:{{rows}}<input class="slider" type="range" min="5" max="25" [(ngModel)]="rows" (change)="clear()"> 
+        <br>
+        cols:{{columns}}<input class="slider" type="range" min="5" max="25" [(ngModel)]="columns" (change)="clear()"> 
+    </div>
+    <div class="grid-container" [ngStyle]="{
+        'grid-template-columns': 'repeat('+ columns +',50px)',
+        'grid-template-rows': 'repeat(' + rows +',50px)'
+    }">
+        <div class="grid-item" *ngFor="let item of board" (click)="toggleLife(item)"
+            [ngStyle]="{'background-color': item.alive === true ? 'green' : 'red'}">
+        </div>
+    </div>
+</div>
+
+
